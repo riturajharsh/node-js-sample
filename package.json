@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "build": "npm install && npm prune --production",
     "test": "jest",
     "lint": "eslint"
   },
