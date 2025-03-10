@@ -1,15 +1,17 @@
-module.exports = {
+// eslint.config.js
 
-  extends: ['eslint:recommended'],
+import js from "@eslint/js";
+import customConfig from "./custom-config.js";
+import myConfig from "eslint-config-my-config";
 
-  rules: {
-
-    'no-unused-vars': 'error',
-
-    'semi': 'error',
-
-    'quotes': ['error', 'single'] // Enforce single quotes
-
-  }
-
-};
+export default [
+    js.configs.recommended,
+    customConfig,
+    myConfig,
+    {
+        rules: {
+            semi: ["warn", "always"]
+        },
+        // ...other config
+    }
+];
